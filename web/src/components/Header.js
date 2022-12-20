@@ -18,7 +18,7 @@ const Header = () => {
 export default Header; */
 
 import{Link} from 'react-router-dom';
-import logo from "../images/woman.png"
+import logo from "../images/woman_crop.png"
 import "../styles/layout/HeaderLanding.scss";
 
 const Header = () => {
