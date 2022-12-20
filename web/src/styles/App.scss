@@ -1,0 +1,11 @@
+@import "core/reset";
+@import "core/Variables";
+@import "layout/create";
+@import "pages/index";
+
+/*
+  style="background-image: url(./assets/images/giphy.gif)"
+*/
+.hidden {
+  display: none;
+}

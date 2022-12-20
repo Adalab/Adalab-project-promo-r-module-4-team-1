@@ -1,0 +1,38 @@
+@import "../core/variables";
+
+.footerdiv{
+
+  height: 100%;
+}
+
+.footer {
+  background-color: red;
+  font-family: $mainFont;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #d8d8d8;
+  background-color: $newRed;
+
+  @media all and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  &__copy {
+    color: #d8d8d8;
+    font-size: 14px;
+    margin: 18px 61px 12px 61px;
+    width: 210px;
+    height: 20px;
+  }
+
+  &__logo {
+    height: 40px;
+    margin: 12px 47px 20px 48px;
+    @media all and (min-width: 768px) {
+      margin: 10px 40px 10px 0;
+    }
+  }
+}

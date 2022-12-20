@@ -1,0 +1,161 @@
+@import "../core/variables";
+.input {
+  border: 1px solid $newRed;
+  width: 281px;
+  height: 30px;
+  padding-left: 10px;
+  &::placeholder {
+    /* padding-inline-start: 10px; */
+    color: #d8d8d8;
+  }
+}
+
+.text-label {
+  font-family: $mainFont;
+  font-size: 14px;
+  line-height: 20px;
+  color: $newBlue;
+  margin-bottom: 7px;
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}
+
+.fill {
+  margin: 10px 20px 0 23px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid #d8d8d8;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 18px;
+    padding-bottom: 25px;
+
+    &--icon {
+      color: $newRed;
+      padding-right: 12px;
+    }
+    &--legend {
+      text-transform: uppercase;
+      font-family: $mainFont;
+      font-weight: 600;
+      color: $newBlue;
+      padding-right: 155px;
+    }
+    &--arrow {
+      font-size: 18px;
+      color: $newRed;
+    }
+  }
+  &__name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  &__job {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  &__img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 141px 20px 0;
+    &--inputImg {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 140px;
+      height: 30px;
+      color: white;
+      background-color: $newRed;
+      border-radius: 3px;
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+      font-family: $mainFont;
+      text-transform: capitalize;
+      font-size: 14px;
+      text-align: center;
+      padding-left: 0;
+    }
+  }
+  &__email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  &__tel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  &__linkedin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  &__git {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+}
+
+.profile__preview {
+  position: absolute;
+  transform: translate(159px, -69px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid $newRed;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+}
+
+.arrow-fill-rotate {
+  transform: rotate(180deg);
+}
+
+.fa-shield {
+  color: $newRed;
+  font-size: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.invalid-field{
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.invalid-field::placeholder { 
+  color: grey;
+  opacity: 1;
+}
+
+.error-message{
+  color: red;
+  font-size: 10px;
+  margin-top: 5px;
+}

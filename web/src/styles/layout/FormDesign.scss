@@ -1,0 +1,115 @@
+@import "../core/Variables.scss";
+/*Icono+título+pestaña*/
+.design {
+  margin: 27px 20px 30px 20px;
+  border: none;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d8d8d8;
+  flex-direction: column;
+  &__div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding-bottom: 31px;
+    &--icon {
+      color: $newRed;
+      padding-right: 12px;
+    }
+    &--legend {
+      font-family: $mainFont;
+      font-weight: 600;
+      color: $newBlue;
+      text-transform: uppercase;
+      padding-right: 168px;
+    }
+    &--arrow {
+      color: $newRed;
+      font-size: 18px;
+    }
+  }
+
+  &__second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding-left: 10px;
+    @media all and (min-width: 768px) {
+      gap: 110px;
+      padding-left: 0;
+    }
+  }
+}
+
+.div2 {
+  display: flex;
+  flex-direction: column;
+
+  &__palette {
+    list-style: none;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 8px;
+
+    &--checkBox {
+      display: flex;
+      margin-right: 42px;
+      font-family: $mainFont;
+      font-size: 13px;
+      color: $newRed;
+      text-transform: uppercase;
+    }
+    &--input {
+      margin-right: 5px;
+    }
+    &--list {
+      width: 30px;
+      height: 25px;
+    }
+    //first palettte -WonderAdalaber
+    &--darkGreen {
+      background-color: $darkGreen;
+    }
+    &--mediumGreen {
+      background-color: $mediumGreen;
+    }
+    &--lightGreen {
+      background-color: $lightGreen;
+    }
+    //second palette - Front-end
+    &--darkRed {
+      background-color: $darkRed;
+    }
+    &--mediumRed {
+      background-color: $mediumRed;
+    }
+    &--lightRed {
+      background-color: $lightRed;
+    }
+    //third palette- Back-end
+    &--greenThree {
+      background-color: $greenThree;
+    }
+    &--yellowThree {
+      background-color: $yellowThree;
+    }
+    &--greyThree {
+      background-color: $greyThree;
+    }
+  }
+}
+
+.fa-shield {
+  color: $newRed;
+  font-size: 20px;
+}
+
+.faShieldUp {
+  transform: rotate(180deg);
+}
+.hidden {
+  display: none;
+}
