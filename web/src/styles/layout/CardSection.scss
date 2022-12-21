@@ -2,21 +2,18 @@
 
 .card-section {
   height: 457px;
-  background-image: linear-gradient(whitesmoke, $newBlue);
+  background-image: linear-gradient(rgb(161, 0, 0), $newBlue);
   padding: 42px 35px 40px 45px;
   display: flex;
   flex-direction: column;
   align-items: center;
   @media all and (min-width: 768px) {
     min-height: 760px; //CAMBIO!!!
-    width: 329px;
-    margin-top: 20px;
-    /* margin-right: 40px; */
-    border-radius: 6px;
-  }
-  @media all and (min-width: 1024px) {
     width: 585px;
     margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    border-radius: 6px;
   }
 }
 
@@ -25,7 +22,7 @@
   cursor: pointer;
   width: 75px;
   height: 30px;
-  border: solid 1px white;
+  border: solid 2px white;
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -38,14 +35,14 @@
   }
 
   &-icon {
-    color: $greyMetal;
+    color: white;
   }
 
   &-text {
-    color: $greyMetal;
     text-transform: uppercase;
     font-family: $mainFont;
     font-size: 12px;
+    color: white;
   }
 }
 

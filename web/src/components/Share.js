@@ -13,36 +13,20 @@ const Share = (props) => {
     if (ev.currentTarget.id === 'share') {
       props.setCollapsed('share');
     }
-    // if (ev.currentTarget.id === "share") {
-    //   console.log("share if");
-    //   return (
-
-    //   )
   };
-
-  // const [formShare, setFormShare] = useState("hidden");
-  // const handleClickShare = (ev) => {
-  //   ev.preventDefault();
-  //   if (formShare === "") {
-  //     setFormShare("hidden");
-  //   } else {
-  //     setFormShare("");
-  //   }
-  // };
 
   return (
     <fieldset className="share">
       <div className="share__div" onClick={handleClick} id="share">
         <i className="fa-icon fa-solid fa-share-nodes share__div--icon"></i>
         <legend className="share__div--legend">comparte</legend>
-        {/* <i className="fa fa-shield fa-shield-up share__div--arrow js-arrow js-arrow-share-up collapsed"></i> */}
         <i
           className={`fa fa-shield fa-shield-up share__div--arrow js-arrow js-arrow-share-up   ${
             props.collapsed === 'share' ? null : 'arrow-share-rotate'
           }`}
         ></i>
       </div>
-      <div className={`${props.collapsed === 'share' ? 'null' : 'hidden'}`}>
+      <div className={`${props.collapsed === 'share' ? null : 'hidden'}`}>
         <button className="share__button" onClick={handleShare}>
           <i className="fa-regular fa-address-card share__button--icon"></i>
           crear tarjeta

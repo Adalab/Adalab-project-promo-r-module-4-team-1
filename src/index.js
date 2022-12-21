@@ -1,6 +1,7 @@
 // Importamos los dos módulos de NPM necesarios para trabajar
 const express = require('express');
 const cors = require('cors');
+const {uuid} = require('uuidv4');
 
 // Creamos el servidor
 const server = express();
@@ -15,6 +16,8 @@ server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
+const savedCard = [];
+
 server.post('/card', (req, res) => {
     // console.log(req.body)
     const dataCard = req.body;
@@ -25,19 +28,26 @@ server.post('/card', (req, res) => {
         success: false,
         error: "Debe ingresar todos los campos"
       };
-      console.log(res.json(response));
       res.json(response);
     }
     else{
-  
+      const newCard = {
+        id: uuid(),
+        ...req.body,
+      }
+      savedCard.push(newCard)
 
       console.log('true');
       response = {
         success: true,
-        cardURL: "https://dev.adalab.es/card/16715369218063424"
+        cardURL: `http://localhost:4000/card/${newCard.id}`
       };
-      console.log(res.json(response));
       res.json(response);
     } 
 
   });
+
+// Static Servers
+
+  const staticServerPathWeb = './src/public-react'; // En esta carpeta ponemos los ficheros estáticos
+  server.use(express.static(staticServerPathWeb));

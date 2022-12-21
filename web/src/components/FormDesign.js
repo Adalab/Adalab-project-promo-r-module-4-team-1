@@ -30,7 +30,7 @@ function formDesign(props) {
         <legend className="design__div--legend">diseña</legend>
         <i
           className={`fa fa-shield fa-shield-up share__div--arrow js-arrow js-arrow-share-up ${
-            props.collapsed === 'design' ? ' null ' : 'arrow-share-rotate'
+            props.collapsed === 'design' ?  null  : 'arrow-share-rotate'
           }`}
         ></i>
 

@@ -24,7 +24,7 @@
   }
   .main {
    
-    height: 100vh;
+    height: 86vh;
     background-image: url("../../images/superbc.png");
     background-origin: content-box;
     background-repeat: no-repeat;
@@ -33,12 +33,11 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-size: 390px;
     background-color: $newBlue;
-    @media all and (min-width: 768px) {
-      background-size: 750px;
-  
+    @media all and(min-width: 768px){
+      height: 93.1vh;
     }
+
     &__h1 {
       display: none;
     }
@@ -51,12 +50,10 @@
       width: 280px;
       margin: 30px 35px 35px 35px;
       @media all and (min-width: 768px) {
-        /*  width: 419px;
-        height: 105px; */
-        /* margin-top: 50px; */
+
         margin: 0px 0px 15px 0px;
         position: relative;
-        //top: 50px;
+
       }
     }
     &__title {
