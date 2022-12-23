@@ -2,7 +2,6 @@
 const express = require('express');
 const cors = require('cors');
 const { v4: uuidv4 } = require('uuid');
-const Database = require('better-sqlite3');
 
 // Creamos el servidor
 const server = express();
@@ -10,15 +9,6 @@ const server = express();
 // Configuramos el servidor
 server.use(cors());
 server.use(express.json({ limit: '25mb' }));
-
-server.set('view engine', 'ejs');
-
-// indicar qué base de datos vamos a usar con la ruta relativa a la raíz del proyecto
-const db = new Database('./src/data/database.db', {
-  // con verbose le decimos que muestre en la consola todas las queries que se ejecuten
-  verbose: console.log,
-  // así podemos comprobar qué queries estamos haciendo en todo momento
-});
 
 // Arrancamos el servidor en el puerto 3000
 const serverPort = 4000;
@@ -62,19 +52,8 @@ server.post('/card', (req, res) => {
     res.json(response);
   }
 });
-//Endpoint que devuelve la tarjeta creada
-server.get('/card/:id', (req, res) => {
-  const id = req.params.id;
-  const query = db.prepare('SELECT * FROM cards WHERE id= ?');
-  const useCard = query.get(id);
-  console.log(useCard);
-  res.render('cards', useCard);
-});
 
 // Static Servers
 
 const staticServerPathWeb = './src/public-react'; // En esta carpeta ponemos los ficheros estáticos
 server.use(express.static(staticServerPathWeb));
-
-const staticServerStylesWeb = './src/public-styles';
-server.use(express.static(staticServerStylesWeb));
