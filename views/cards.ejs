@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/cardStyle.css">
+  <title>Your card: <%= name %>
+  </title>
+</head>
+
+<body>
+  <article class="card js-preview-card js-palette<%= palette %>">
+
+    <div class="card-text">
+      <h2 class="card-text-name js-preview-name">
+        <%= name %>
+      </h2>
+      <p class="card-text-job js-preview-job">
+        <%= job %>
+      </p>
+    </div>
+
+    <div class="card-image js-card-img profile__image js__profile-image" title="Preview image" alt="Preview image">
+
+      <img class="card-image" src="<%=photo %>" alt="cosas" />
+
+    </div>
+
+    <div class="social-media">
+      <a href="<%=phone %>" class="social-media-icon js-phone-icon" target="_blank" rel="noreferrer">
+        <i class="fa-solid fa-mobile-screen-button"></i>
+      </a>
+      <a href="<%=email %>" class="social-media-icon js-email-icon" target="_blank" rel="noreferrer">
+        <i class="fa-regular fa-envelope"></i>
+      </a>
+      <a href="<%=linkedin %>" class="social-media-icon js-linkedin-icon" target="_blank" rel="noreferrer">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a href="<%=github %>" class="social-media-icon js-github-icon" target="_blank" rel="noreferrer">
+        <i class="fa-brands fa-github-alt"></i>
+      </a>
+    </div>
+  </article>
+</body>
+
+</html>

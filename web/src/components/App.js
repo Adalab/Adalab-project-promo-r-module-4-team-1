@@ -129,7 +129,7 @@ function App() {
       github: '',
       palette: '1',
       photo: imageprv,
-    })
+    });
   };
 
   const createCard = () => {

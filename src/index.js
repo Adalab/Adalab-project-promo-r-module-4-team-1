@@ -29,7 +29,7 @@ server.listen(serverPort, () => {
 const savedCard = [];
 
 server.post('/card', (req, res) => {
-  // console.log(req.body)
+  console.log(req.body);
   const dataCard = req.body;
 
   if (
@@ -52,21 +52,35 @@ server.post('/card', (req, res) => {
       id: uuidv4(),
       ...req.body,
     };
-    savedCard.push(newCard);
+    // savedCard.push(newCard);
 
     console.log('true');
     response = {
       success: true,
       cardURL: `http://localhost:4000/card/${newCard.id}`,
     };
-    res.json(response);
+    const insertStmt = db.prepare(
+      'INSERT INTO cards (id, palette, name, email, photo, phone, linkedin, github, job) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)'
+    );
+
+    const result = insertStmt.run(
+      newCard.id,
+      newCard.palette,
+      newCard.name,
+      newCard.email,
+      newCard.photo,
+      newCard.phone,
+      newCard.linkedin,
+      newCard.github,
+      newCard.job
+    );
+    res.json(result);
   }
 });
 //Endpoint que devuelve la tarjeta creada
 server.get('/card/:id', (req, res) => {
-  const id = req.params.id;
   const query = db.prepare('SELECT * FROM cards WHERE id= ?');
-  const useCard = query.get(id);
+  const useCard = query.get(req.params.id);
   console.log(useCard);
   res.render('cards', useCard);
 });
