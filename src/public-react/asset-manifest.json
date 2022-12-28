@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "./static/css/main.0fc47f0c.css",
-    "main.js": "./static/js/main.988e03af.js",
+    "main.js": "./static/js/main.b5813e7c.js",
     "static/media/29089-wonder-woman-galgadot-46-1621920419.jpg": "./static/media/29089-wonder-woman-galgadot-46-1621920419.0706e64b22b984e84fdb.jpg",
     "static/media/giphy.gif": "./static/media/giphy.b99cba4932f70b1ecdc8.gif",
     "static/media/superbc.png": "./static/media/superbc.d47b881f0d87492f54cf.png",
     "static/media/woman_crop.png": "./static/media/woman_crop.d89572cb16c80523e8b4.png",
     "index.html": "./index.html",
     "main.0fc47f0c.css.map": "./static/css/main.0fc47f0c.css.map",
-    "main.988e03af.js.map": "./static/js/main.988e03af.js.map"
+    "main.b5813e7c.js.map": "./static/js/main.b5813e7c.js.map"
   },
   "entrypoints": [
     "static/css/main.0fc47f0c.css",
-    "static/js/main.988e03af.js"
+    "static/js/main.b5813e7c.js"
   ]
 }
