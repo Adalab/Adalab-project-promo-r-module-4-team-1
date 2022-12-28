@@ -74,7 +74,7 @@ server.post('/card', (req, res) => {
       newCard.github,
       newCard.job
     );
-    res.json(result);
+    res.json(response);
   }
 });
 //Endpoint que devuelve la tarjeta creada
